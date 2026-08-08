@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Task Manager</h1>
+            <p>Organize your tasks and stay productive.</p>
+        </header>
+
+        <section class="task-input-section">
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                    autocomplete="off"
+                >
+
+                <button type="submit" id="addTaskBtn">
+                    Add Task
+                </button>
+
+            </form>
+
+            <p id="errorMessage" class="error-message"></p>
+        </section>
+
+        <section class="statistics">
+
+            <div class="stat-card total-card">
+                <span class="stat-label">Total Tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat-card completed-card">
+                <span class="stat-label">Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+            <div class="stat-card remaining-card">
+                <span class="stat-label">Remaining</span>
+                <strong id="remainingTasks">0</strong>
+            </div>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+
+                <h2>My Tasks</h2>
+
+                <button id="clearCompletedBtn" class="clear-btn">
+                    Clear Completed
+                </button>
+
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <div id="emptyMessage" class="empty-message">
+
+                <div class="empty-icon">✓</div>
+
+                <h3>No tasks yet</h3>
+
+                <p>Add a task above to get started.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
